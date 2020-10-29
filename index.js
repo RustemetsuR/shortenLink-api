@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const run = async () => {
-  await mongoose.connect("mongodb://localhost/shortenLink", {useNewUrlParser: true, useUnifiedTopology: true});
+  await mongoose.connect("mongodb://localhost:27017/shortenLink", {useNewUrlParser: true, useUnifiedTopology: true});
 
   app.use("/", shortenLink());
 
